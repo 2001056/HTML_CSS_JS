@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js function practice</title>
+    <script>
+        function calcfunction(){
+            const selecV = document.getElementById("calc").value;
+            const a = Number(document.getElementById("a").value);
+            const b = Number(document.getElementById("b").value);
+            let sum;
+            if(selecV === "add"){
+                sum = a+b;
+            }else if(selecV === "sub"){
+                sum = a-b;
+            }else if(selecV === "mul"){
+                sum = a*b;
+            }else if(selecV === "div"){
+                sum = a/b; 
+            }
+            document.getElementById("result").innerHTML = sum; 
+        }
+    </script>
+</head>
+<body>
+    <!-- select 박스를 통해 덧셈/뺄셈/곱셈/나눗셈 선택 -->
+    <h2 style="text-align: center;">계산기</h2>
+    <select id="calc">
+        <option value="add">덧셈</option>
+        <option value="sub">뺄셈</option>
+        <option value="mul">곱셈</option>
+        <option value="div">나눗셈</option>
+    </select>
+    <br>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <br>
+    <button onclick="calcfunction()">실행</button>
+    <p id="result">결과값</p> 
+    <!-- input박스 2개 두고 입력을 받아 연산 실행 -->
+</body>
+</html>

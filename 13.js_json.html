@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js json</title>
+    <script>
+      function parsing1() {
+        const jsonData = '{"id":1,"name":"hong1","email":"hong@naver.com"}';
+        const obj1 = JSON.parse(jsonData);
+        console.log(obj1);
+      }
+      function stringify() {
+        const obj1 = {id:1,name:"hong1",email:"hong@naver.com"};
+        const jsonData = JSON.stringify(obj1);
+        console.log(obj1);
+        console.log(jsonData);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>json 처리 기본</h2>
+    <button onclick="parsing1()">json 데이터 파싱</button>
+    <button onclick="stringify()">json 데이터 생성(직렬화)</button>
+  </body>
+</html>
