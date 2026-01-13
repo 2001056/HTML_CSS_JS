@@ -44,8 +44,8 @@
             const contents = document.getElementById("contents").value;
             const data = {title:title,contents:contents};
             // axios의 post함수를 통해 js의 객체를 json으로 자동형변환
-            await axios.post("http://localhost:8081/post/register1",data);
-            window.location.href = "post_list.html";
+            await axios.post("http://ec2-43-201-114-183.ap-northeast-2.compute.amazonaws.com:8081/post/register1",data);
+            window.location.href = "http://lbc-board.s3.ap-northeast-2.amazonaws.com/post_list.html";
             }
             catch(error){
                 alert("예상치 못한 에러가 발생했습니다.");

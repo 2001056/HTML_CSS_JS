@@ -46,7 +46,7 @@
     </div>
     <script>
       async function postList() {
-        const a = await axios.get("http://localhost:8081/post/list");
+        const a = await axios.get("http://ec2-43-201-114-183.ap-northeast-2.compute.amazonaws.com:8081/post/list");
         const result = a.data;
         for (let i = 0; i < result.length; i++) {
           document.getElementById("posts").innerHTML +=
